@@ -5,7 +5,7 @@ require 'ivona/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ivona"
-  #spec.version       = ivona::VERSION
+  spec.version       = Ivona::VERSION
   spec.authors       = ["bornfree"]
   spec.email         = ["harsha.xg@gmail.com"]
   spec.description   = %q{Ruby client to talk to ivona speech cloud / Repackaged from the speechcloud gem}
