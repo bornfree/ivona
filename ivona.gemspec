@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["bornfree"]
   spec.email         = ["harsha.xg@gmail.com"]
   spec.description   = %q{Ruby client to talk to ivona speech cloud / Repackaged from the speechcloud gem}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.summary       = %q{Original credits: Sean Holden for the speechcloud gem}
   spec.homepage      = ""
   spec.license       = "MIT"
 
