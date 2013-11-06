@@ -1,4 +1,4 @@
-BASE_URL = 'https://secure.ivona.com/api/saas/rest'
+BASE_URL = 'https://api.ivona.com/api/saas/rest'
 require 'digest/md5'
 
 module Ivona
