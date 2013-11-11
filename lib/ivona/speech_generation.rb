@@ -1,11 +1,11 @@
 module Ivona::Speech
   class << self
     # Helper. Gathers params for the create_speech_file method defined below.
-    def get_speech_file_params(text, codec_id='mp3/22050' )
+    def get_speech_file_params(text, voice, codec_id='mp3/22050' )
       token        = Ivona::Auth.get_token
       md5          = Ivona::GetMd5.formula(token)
       content_type = 'text/plain'
-      voice_id     = Ivona::Config.voice_id
+      voice_id     = voice
       codec_id     = Ivona::Config.codec_id
       {  token:       token,
          md5:         md5,
@@ -16,8 +16,8 @@ module Ivona::Speech
     end
 
     # Get a url for a speech file generated from uploaded text.
-    def create_speech_file( text )
-      HTTParty.post("#{BASE_URL}/speechfiles", {:body=>get_speech_file_params( text )})
+    def create_speech_file( text, voice='en_us_salli')
+      HTTParty.post("#{BASE_URL}/speechfiles", {:body=>get_speech_file_params( text, voice)})
     end
 
     # Get a url for a speech file generated from uploaded text and for a text file with speech 
