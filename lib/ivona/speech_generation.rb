@@ -22,8 +22,8 @@ module Ivona::Speech
 
     # Get a url for a speech file generated from uploaded text and for a text file with speech 
     # marks describing the positions of the text entities in a speech file.
-    def create_speech_file_with_marks( text )
-      HTTParty.post("#{BASE_URL}/speechfileswithmarks", {:body=>get_speech_file_params( text )})
+    def create_speech_file_with_marks( text, voice='en_us_salli' )
+      HTTParty.post("#{BASE_URL}/speechfileswithmarks", {:body=>get_speech_file_params( text, voice )})
     end
 
     # Delete a single speech file data
