@@ -14,6 +14,10 @@ Ivona::Config.codec_id = "mp3/22050"
 
 ### Create speech file
 First include Ivona module in the model where you want to use the methods
+```ruby
+include Ivona
+```
+
 Then create the speech file
 ```ruby
 response = Speech.create_speech_file("Text to convert to speech", voice_id) #voice_id defaults to en_us_salli
